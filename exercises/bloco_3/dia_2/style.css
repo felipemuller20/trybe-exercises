@@ -1,0 +1,24 @@
+h1 {
+    text-decoration:wavy;
+  font-size: 40px;
+font-family: Arial, Helvetica, sans-serif;
+color: orange;
+}
+ul {
+line-height: 40px;
+text-align: justify;
+
+}
+.style {
+background-color: blue;
+}
+p { font-weight: 600;
+font-size: 3em;
+font-style:italic;
+}
+#yellow { background-color: yellow;}
+#red { background-color: red;}
+#brown { background-color: brown;}
+body {
+font-size: 16px;
+}
