@@ -1,0 +1,8 @@
+h1, p{
+    text-align: center;
+}
+ul {list-style:square;}
+li:hover {background-color: blue;
+width: 200px;}
+li:active {font-family: fantasy,sans-serif;}
+li:focus {color: red;}
