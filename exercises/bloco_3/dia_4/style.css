@@ -83,3 +83,29 @@ footer {
     background-color: yellow;
 }
 
+#float-container {
+    background-color: #fffffc;
+    margin: 10px;
+    padding: 20px;
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0;
+    float: right;
+    margin-right: 280px;
+    
+  }
+
+#float-container a {
+    
+    display: inline-block;    
+    width: 350px;
+    font-size: 25px;
+}
+
+#camarao {
+    float: right;
+    margin-right: 100px;
+    width: 800px;
+
+}
