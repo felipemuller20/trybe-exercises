@@ -15,10 +15,6 @@ console.log('Bem vinda, ' + info.personagem);
 
 info['recorrente'] = 'Sim';
 
-// for (let key in info) {
-//   console.log(key);
-// }
-
 for (let key in info) {
   if (key === 'recorrente' &&
   info[key] === "Sim" &&
