@@ -90,7 +90,102 @@ fridayB.addEventListener('click', function() {
 }
 fridayBtn();
 
+// exercicio 6 - primeira opção também funciona, mas mais complexa
 
 
+// let monthDays = document.querySelector('#days');
+// function zoomDay() {
+//   for (let index = 0; index < monthDays.children.length; index += 1) {
+//     monthDays.children[index].addEventListener('mouseover', function() {     
+//       monthDays.children[index].style.fontSize = '100px';
+//     })
+//   }
+// }
+
+function zoomDay() {
+  let monthDays = document.querySelector('#days');
+  monthDays.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '30px';
+
+  })
+}
 
 
+function zoomDayOut() {
+  let monthDays = document.querySelector('#days');
+  monthDays.addEventListener('mouseout', function(event) {
+    event.target.style.fontSize = '20px';
+   
+  })
+}
+zoomDay();
+zoomDayOut();
+
+// exercicio 7
+
+function newTask(string) {
+  let newTask = document.createElement('span');
+  document.querySelector('.my-tasks').appendChild(newTask);
+  newTask.innerText = string;
+}
+
+newTask('Estudar');
+
+// exercicio 8
+
+function paintDiv(color) {
+  let newDiv = document.createElement('div');
+  newDiv.className = 'task';
+  newDiv.style.backgroundColor = color;
+  let myTasks = document.querySelector('.my-tasks')
+  myTasks.appendChild(newDiv);
+}
+paintDiv('red');
+
+// exercicio 9
+function selectTask() {
+  let selectTask = document.querySelector('.task');
+  selectTask.addEventListener('click', function() {
+    if (selectTask.className === 'task') {
+    selectTask.className = 'task selected';
+    } else {
+      selectTask.className = 'task';
+    }
+  })
+}
+selectTask();
+
+// exercicio 10
+function dayColor() {
+  let monthDays = document.querySelector('#days');
+  monthDays.addEventListener('click', function(event) {
+    if (document.querySelector('.selected') != null) {
+      let color = document.querySelector('.selected').style.backgroundColor;
+      if (event.target.style.color != color) {
+        event.target.style.color = color;
+      } else {
+        event.target.style.color = 'rgb(119,119,119)';
+      }
+    }
+  })
+}
+dayColor();
+
+// function setDayColor() {
+//   let selectedTask = document.getElementsByClassName('task selected');
+//   let days = document.querySelector('#days');
+//   let taskDiv = document.querySelector('.task');
+//   let taskColor = taskDiv.style.backgroundColor;
+  
+//   days.addEventListener('click', function(event){
+//     let eventTargetColor = event.target.style.color;
+//     if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+//       let color = selectedTask[0].style.backgroundColor;
+//       event.target.style.color = color;
+//     } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+//       event.target.style.color = 'rgb(119,119,119)';
+//     }
+//   });
+// };
+
+// setDayColor();
